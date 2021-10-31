@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css">
     <title>Generador de números aleatorios</title>
 </head>
 <body>
 
-    <main>
+    <main class="main">
 
-        <section>
+        <section class="section__container">
 
-            <label for="cantidad">¿Cuántos números quieres generar?
-                <input name="numero" id="cantidad" type="number" minlength="1" maxlength="9999">
+            <h1 class="title">
+                Generador de Números aleatorios
+            </h1>
+            <label class="label" for="cantidad">¿Cuántos números quieres generar?
             </label>
-
-            <label for="rango">
-                <select name="" id="rango">
+            <input name="numero" id="cantidad" type="number" minlength="1" maxlength="4" min="1" max="9999" class="input">
+            
+            <label class="label" for="rango">Selecciona el rango
+                <select name="" id="rango" class="input">
                     <option selected value="0-99">0-99</option>
                     <option value="0-999">0-999</option>
                     <option value="0-9999">0-9999</option>
                 </select>
             </label>
 
-            <button onclick="aleatorios()" id="generador">Generar aleatorios</button>
+            <button onclick="aleatorios()" id="generador" class="button">Generar aleatorios</button>
             
-            <label id="resultado">
+            <label id="resultado" class="label label--resultado">
 
                 
 

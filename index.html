@@ -18,23 +18,25 @@
             </h1>
             <label class="label" for="cantidad">¿Cuántos números quieres generar?
             </label>
-            <input name="numero" id="cantidad" type="number" minlength="1" maxlength="4" min="1" max="9999" class="input">
+            <input name="numero" id="cantidad" type="number" minlength="1" maxlength="4" min="1" max="10000" class="input">
             
             <label class="label" for="rango">Selecciona el rango
-                <select name="" id="rango" class="input">
-                    <option selected value="0-99">0-99</option>
-                    <option value="0-999">0-999</option>
-                    <option value="0-9999">0-9999</option>
-                </select>
+
             </label>
+
+            <select name="" id="rango" class="select">
+                <option selected value="0-99">0-99</option>
+                <option value="0-999">0-999</option>
+                <option value="0-9999">0-9999</option>
+            </select>
 
             <button onclick="aleatorios()" id="generador" class="button">Generar aleatorios</button>
             
-            <label id="resultado" class="label label--resultado">
+            <span id="resultado" class="label label--resultado">
 
                 
 
-            </label>
+            </span>
 
         </section>
 

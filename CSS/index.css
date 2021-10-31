@@ -20,6 +20,7 @@
 
 html{
     font-size: 62.5%;
+    background-color: var(--azul-oscuro);
 }
 
 .main{
@@ -27,15 +28,19 @@ html{
     height: 100vh;
     width: 100%;
     place-items: center;
+    background-color: var(--azul-oscuro);
 }
 
 .section__container{
+
     width: 90%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(288px, 500px);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
     align-items: center;
+    place-content: center;
+    
 
 }
 
@@ -51,16 +56,26 @@ html{
     font-size: 1.6rem;
     line-height: 1.8rem;
     font-weight: 500;
+    justify-self: center;
     
 }
 
 .input{
-    max-width: 270px;
+    width: 90%;
+    max-width: 300px;
     height: 35px;
+    justify-self: center;
 }
 
 .input:invalid{
-    background-color: rgb(248, 159, 159);
+    background-color: rgb(255, 155, 73);
+    /* background-color: rgb(248, 159, 159); */
+}
+
+.select{
+    width: 180px;
+    height: 35px;
+    justify-self: center;
 }
 
 .button{
@@ -70,6 +85,7 @@ html{
     border: 1px solid black;
     border-radius: 15px;
     background-color: var(--verde-oscuro);
+    margin-top: 25px;
 }
 
 .button:active{
@@ -77,6 +93,14 @@ html{
 
 }
 
+.label--resultado{
 
+    max-width: 450px;
+
+}
+
+.error{
+    color: #FFEB3B;
+}
 
 

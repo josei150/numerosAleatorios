@@ -22,6 +22,21 @@ function aleatorios()
         limite = 10000;
     }
 
+    if(cantidad > limite)
+    {
+        return resultado.innerHTML = `<p class="error">No puedes generar más de ${limite} números, cambia el rango y vuelve a intentarlo o reduce la cantidad de aleatorios a generar</p>`;
+    }
+
+    if(cantidad < 1 || typeof cantidad != Number)
+    {
+        return resultado.innerHTML = `<p class="error">Debes generar por lo menos un número aleatorio. Introduce un valor mayor a 0 y vuelve a intentarlo</p>`;
+    }
+
+    if(cantidad > 10000)
+    {
+        return resultado.innerHTML = `<p class="error">El valor no debe ser superior a los rangos establecidos. Introduce un valor menor a 10000 y vuelve a intentarlo</p>`;
+    }
+
     while(contador < cantidad)
     {
         numAleatorio = parseInt((Math.random() * limite));
@@ -60,12 +75,12 @@ function aleatorios()
             }
         }
 
-    });
+    }).join(" - ");
 
 
     console.log(numerosFormato);
     
-    resultado.innerHTML = `Los números generados son: ${numerosFormato}`;
+    resultado.innerHTML = `<p>Los números generados son: <br> ${numerosFormato}</p>`;
 
 }
 

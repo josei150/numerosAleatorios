@@ -27,7 +27,12 @@ function aleatorios()
         return resultado.innerHTML = `<p class="error">No puedes generar más de ${limite} números, cambia el rango y vuelve a intentarlo o reduce la cantidad de aleatorios a generar</p>`;
     }
 
-    if(cantidad < 1 || typeof cantidad != Number)
+    if(cantidad < 1)
+    {
+        return resultado.innerHTML = `<p class="error">Debes generar por lo menos un número aleatorio. Introduce un valor mayor a 0 y vuelve a intentarlo</p>`;
+    }
+
+    if(isNaN(cantidad))
     {
         return resultado.innerHTML = `<p class="error">Debes generar por lo menos un número aleatorio. Introduce un valor mayor a 0 y vuelve a intentarlo</p>`;
     }
